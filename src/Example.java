@@ -56,7 +56,7 @@ public class Example {
 		JLabel background = new JLabel();
 		background.setBounds(0,0, 735, 495);
 		frame.getContentPane().add(background);
-
+		
 		JLabel scoreVar = new JLabel("");
 		scoreVar.setForeground(Color.WHITE);
 		scoreVar.setBounds(74, 13, 69, 20);
