@@ -11,6 +11,7 @@ import java.awt.Font;
 import javax.swing.JPanel;
 import java.awt.GridLayout;
 import javax.swing.ImageIcon;
+import javax.swing.SwingConstants;
 
 public class Example {
 
@@ -52,10 +53,6 @@ public class Example {
 		frame.setBounds(100, 100, 735, 495);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
-		JLabel background = new JLabel();
-		background.setBounds(0,0, 735, 495);
-		frame.getContentPane().add(background);
 		
 		JLabel scoreVar = new JLabel("");
 		scoreVar.setForeground(Color.WHITE);
