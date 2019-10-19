@@ -57,7 +57,7 @@ public class Example {
 		frame.setBounds(100, 100, 735, 495);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-
+		frame.setResizable(false);
 		JLabel scoreVar = new JLabel("");
 		scoreVar.setForeground(Color.WHITE);
 		scoreVar.setBounds(74, 13, 69, 20);
