@@ -71,7 +71,7 @@ public class Example {
 			}
 		});
 		btnStart.setBackground(Color.GRAY);
-		btnStart.setForeground(Color.WHITE);
+		btnStart.setForeground(Color.RED);
 		btnStart.setBounds(295, 11, 155, 41);
 		frame.getContentPane().add(btnStart);
 		
