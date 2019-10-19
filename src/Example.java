@@ -163,7 +163,7 @@ public class Example {
 
 				
 				scoreVar.setText(Integer.toString(score));
-				label_5.setIcon(new ImageIcon("dead pumkin.png"));
+				label_5.setIcon(new ImageIcon("sick pumkin.png"));
 
 				frame.getContentPane().revalidate();
 				frame.getContentPane().repaint();
@@ -216,7 +216,7 @@ public class Example {
 
 				
 				scoreVar.setText(Integer.toString(score));
-				label_7.setIcon(new ImageIcon("dead pumkin.png"));
+				label_7.setIcon(new ImageIcon("sick pumkin.png"));
 
 				frame.getContentPane().revalidate();
 				frame.getContentPane().repaint();
@@ -323,7 +323,7 @@ public class Example {
 				
 
 				scoreVar.setText(Integer.toString(score));
-				label_12.setIcon(new ImageIcon("dead pumkin.png"));
+				label_12.setIcon(new ImageIcon("sick pumkin.png"));
 
 				frame.getContentPane().revalidate();
 				frame.getContentPane().repaint();
