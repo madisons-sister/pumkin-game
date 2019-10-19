@@ -4,6 +4,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.Font;
@@ -47,6 +48,10 @@ public class Example {
 		frame.setBounds(100, 100, 735, 495);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		
+		JLabel background = new JLabel();
+		background.setBounds(0,0, 735, 495);
+		frame.getContentPane().add(background);
 		
 		JLabel lblScore = new JLabel("SCORE 1");
 		lblScore.setForeground(Color.WHITE);
@@ -146,5 +151,7 @@ public class Example {
 		label.setIcon(new ImageIcon("spooky_tree.jpg"));
 		label.setBounds(466, 76, 240, 304);
 		frame.getContentPane().add(label);
+		
+		
 	}
 }
