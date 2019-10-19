@@ -68,24 +68,12 @@ public class Example {
 		lblScore.setBounds(10, 11, 66, 24);
 		frame.getContentPane().add(lblScore);
 
-		JButton btnStart = new JButton("START");
-		btnStart.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		btnStart.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				System.out.println("The game has started");
-			}
-		});
-		btnStart.setBackground(Color.GRAY);
-		btnStart.setForeground(Color.RED);
-		btnStart.setBounds(295, 11, 155, 41);
-		frame.getContentPane().add(btnStart);
-
 
 		JLabel timerLabel = new JLabel("");
+		timerLabel.setIcon(new ImageIcon("/Users/sydneymaddox/Documents/GitHub/pumkin-game/black play button.png"));
 		timerLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		timerLabel.setForeground(Color.ORANGE);
-		timerLabel.setBounds(295, 76, 155, 41);
+		timerLabel.setBounds(273, 21, 155, 80);
 		frame.getContentPane().add(timerLabel);
 
 		JLabel label_2 = new JLabel("");
@@ -410,6 +398,10 @@ public class Example {
 		label.setIcon(new ImageIcon("spooky_tree.jpg"));
 		label.setBounds(466, 76, 240, 304);
 		frame.getContentPane().add(label);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setBounds(342, 17, 61, 16);
+		frame.getContentPane().add(lblNewLabel);
 
 
 		try {
