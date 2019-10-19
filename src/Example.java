@@ -7,12 +7,16 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.awt.Font;
 import javax.swing.JPanel;
 import java.awt.GridLayout;
 import javax.swing.ImageIcon;
 
 public class Example {
+	static int interval;
+	static Timer timer;
 
 	public int score = 0;
 
@@ -347,6 +351,31 @@ public class Example {
 		label.setBounds(466, 76, 240, 304);
 		frame.getContentPane().add(label);
 		
+		JLabel timerLabel = new JLabel("");
+		timerLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		timerLabel.setForeground(Color.ORANGE);
+		timerLabel.setBounds(295, 76, 155, 41);
+		frame.getContentPane().add(timerLabel);
+		
+		 Timer timer= new Timer();
+		    int delay = 1000;
+		    int period = 1000;
+		    String secs= "10";
+		    timer = new Timer();
+		   interval = Integer.parseInt(secs);
+		    timer.scheduleAtFixedRate(new TimerTask() {
+		        public void run() {
+		        timerLabel.setText("Time Left: " + setInterval() + " sec");
+		        }
+		    }, delay, period);
+	}
+	private static final int setInterval() {
+	    if (interval == 0) {
+	        timer.cancel();
+	        return 0;
+	    }else {
+	    return --interval;
+	    }
 	}
 }
 
