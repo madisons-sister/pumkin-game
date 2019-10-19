@@ -15,7 +15,6 @@ import javax.swing.ImageIcon;
 public class Example {
 
 	public int score = 0;
-	public boolean clicked = false;
 
 	
 	private JFrame frame;
@@ -80,6 +79,8 @@ public class Example {
 		btnStart.setBounds(295, 11, 155, 41);
 		frame.getContentPane().add(btnStart);
 		
+		boolean clicked = false;
+		
 		JLabel label_2 = new JLabel("");
 		label_2.setIcon(new ImageIcon("pumkin.png"));
 		label_2.setBounds(138, 391, 60, 54);
@@ -88,11 +89,14 @@ public class Example {
 		label_2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				score++;
+				if (clicked == false) {
+					score += 100;
+					scoreVar.setText(Integer.toString(score));
+					label_2.setIcon(new ImageIcon("dead pumkin.png"));
+				} 
 				
-				scoreVar.setText(Integer.toString(score));
-				label_2.setIcon(new ImageIcon("dead pumkin.png"));
-
+				boolean clicked = true;
+				
 				frame.getContentPane().revalidate();
 				frame.getContentPane().repaint();
 			}
@@ -106,7 +110,7 @@ public class Example {
 		label_3.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				score++;
+				score+=100;
 				
 				scoreVar.setText(Integer.toString(score));
 				label_3.setIcon(new ImageIcon("dead pumkin.png"));
@@ -124,7 +128,7 @@ public class Example {
 		label_5.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				score++;
+				score-=50;
 				
 				scoreVar.setText(Integer.toString(score));
 				label_5.setIcon(new ImageIcon("dead pumkin.png"));
@@ -142,7 +146,7 @@ public class Example {
 		label_6.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				score++;
+				score+=100;
 				
 				scoreVar.setText(Integer.toString(score));
 				label_6.setIcon(new ImageIcon("dead pumkin.png"));
@@ -160,7 +164,7 @@ public class Example {
 		label_7.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				score++;
+				score-=50;
 				
 				scoreVar.setText(Integer.toString(score));
 				label_7.setIcon(new ImageIcon("dead pumkin.png"));
@@ -178,7 +182,7 @@ public class Example {
 		label_8.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				score++;
+				score+=100;
 				
 				scoreVar.setText(Integer.toString(score));
 				label_8.setIcon(new ImageIcon("dead pumkin.png"));
@@ -196,7 +200,7 @@ public class Example {
 		label_9.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				score++;
+				score+=100;
 				
 				scoreVar.setText(Integer.toString(score));
 				label_9.setIcon(new ImageIcon("dead pumkin.png"));
@@ -214,7 +218,7 @@ public class Example {
 		label_11.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				score++;
+				score+=100;
 				
 				scoreVar.setText(Integer.toString(score));
 				label_11.setIcon(new ImageIcon("dead pumkin.png"));
@@ -232,7 +236,7 @@ public class Example {
 		label_12.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				score++;
+				score-=50;
 				
 				scoreVar.setText(Integer.toString(score));
 				label_12.setIcon(new ImageIcon("dead pumkin.png"));
@@ -250,7 +254,7 @@ public class Example {
 		label_15.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				score++;
+				score+=100;
 				
 				scoreVar.setText(Integer.toString(score));
 				label_15.setIcon(new ImageIcon("dead pumkin.png"));
@@ -268,7 +272,7 @@ public class Example {
 		label_17.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				score++;
+				score+=100;
 				
 				scoreVar.setText(Integer.toString(score));
 				label_17.setIcon(new ImageIcon("dead pumkin.png"));
@@ -286,10 +290,10 @@ public class Example {
 		label_20.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				score++;
+				score-=50;
 				
 				scoreVar.setText(Integer.toString(score));				
-				label_20.setIcon(new ImageIcon("dead pumkin.png"));
+				label_20.setIcon(new ImageIcon("sick pumkin.png"));
 
 				
 				frame.getContentPane().revalidate();
@@ -305,10 +309,14 @@ public class Example {
 		label_22.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				score++;
+				if (clicked == false) {
+					score+= 100;
+					
+					scoreVar.setText(Integer.toString(score));
+					label_22.setIcon(new ImageIcon("dead pumkin.png"));
+//					boolean clicked = true;
+				}
 				
-				scoreVar.setText(Integer.toString(score));
-				label_22.setIcon(new ImageIcon("dead pumkin.png"));
 
 				frame.getContentPane().revalidate();
 				frame.getContentPane().repaint();
@@ -324,7 +332,7 @@ public class Example {
 		label_24.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				score++;
+				score+=100;
 				
 				scoreVar.setText(Integer.toString(score));
 				label_24.setIcon(new ImageIcon("dead pumkin.png"));
