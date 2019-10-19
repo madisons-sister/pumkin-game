@@ -21,6 +21,7 @@ public class Example {
 	public int score = 0;
 	public boolean clicked = false;
 
+	
 	private JFrame frame;
 
 	/**
@@ -342,7 +343,6 @@ public class Example {
 		label.setBounds(466, 76, 240, 304);
 		frame.getContentPane().add(label);
 		
-<<<<<<< HEAD
 		JLabel timerLabel = new JLabel("");
 		timerLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		timerLabel.setForeground(Color.ORANGE);
@@ -368,8 +368,6 @@ public class Example {
 	    }else {
 	    return --interval;
 	    }
-=======
->>>>>>> d5273c9e2888435a86bf52a5b6e780a9e65528e6
 	}
 }
 
