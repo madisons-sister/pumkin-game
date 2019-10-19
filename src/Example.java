@@ -486,6 +486,11 @@ public class Example {
 		label.setIcon(new ImageIcon("spooky_tree.jpg"));
 		label.setBounds(466, 76, 240, 304);
 		frame.getContentPane().add(label);
+		
+		JLabel label_1 = new JLabel("");
+		label_1.setIcon(new ImageIcon("C:\\Users\\Dont'e Dwight\\Documents\\GitHub\\pumkin-game\\moon boo.png"));
+		label_1.setBounds(41, 60, 120, 117);
+		frame.getContentPane().add(label_1);
 	
 		try {
 			timer= new Timer();
