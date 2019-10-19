@@ -471,7 +471,6 @@ public class Example {
 
 
 				if(!timerLabel.getText().equals("Time's up!!") && !timerLabel.getText().equals("Game Over!")) {
-					System.out.println(timerLabel.getText());
 					score+=100;
 
 					scoreVar.setText(Integer.toString(score));
