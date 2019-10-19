@@ -21,6 +21,7 @@ public class Example {
 
 	public int score = 0;
 	public int val;
+	boolean green = false;
 
 
 	private JFrame frame;
@@ -70,13 +71,94 @@ public class Example {
 
 
 		JLabel timerLabel = new JLabel("");
-		timerLabel.setIcon(new ImageIcon("/Users/sydneymaddox/Documents/GitHub/pumkin-game/black play button.png"));
 		timerLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		timerLabel.setForeground(Color.ORANGE);
-		timerLabel.setBounds(273, 21, 155, 80);
+		timerLabel.setBounds(295, 76, 155, 41);
 		frame.getContentPane().add(timerLabel);
 
 		JLabel label_2 = new JLabel("");
+		JLabel label_3 = new JLabel("");
+		JLabel label_5 = new JLabel("");
+		JLabel label_6 = new JLabel("");
+		JLabel label_7 = new JLabel("");
+		JLabel label_8 = new JLabel("");
+		JLabel label_9 = new JLabel("");
+		JLabel label_11 = new JLabel("");
+		JLabel label_12 = new JLabel("");
+		JLabel label_15 = new JLabel("");
+		JLabel label_17 = new JLabel("");
+		JLabel label_20 = new JLabel("");
+		JLabel label_22 = new JLabel("");
+		JLabel label_24 = new JLabel("");
+		
+		JLabel lblNewLabel = new JLabel();
+		lblNewLabel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				
+				
+				if (green) {
+				lblNewLabel.setIcon(new ImageIcon("black play button.png"));
+				green = false;
+				val = 10;
+				timerLabel.setText("Time Left: " + val + " sec");
+				
+				int delay = 1000;
+				int period = 1000;
+				String secs= "10";
+				interval = Integer.parseInt(secs);
+				timer.scheduleAtFixedRate(new TimerTask() {
+					public void run() {
+
+						val= setInterval();
+
+						if(timerLabel.getText().equals("Game Over!")) {	
+							lblNewLabel.setIcon(new ImageIcon("green play button.png"));
+							green =true;
+							//timerLabel.setText("Game Over!");
+						}else if(val>0){
+							timerLabel.setText("Time Left: " + val + " sec");
+						} else {
+							timerLabel.setText("Time's up!!");
+							lblNewLabel.setIcon(new ImageIcon("green play button.png"));
+							green =true;
+						}
+
+					}
+				}, delay, period);
+				
+				//reseting pumpkins
+				label_2.setIcon(new ImageIcon("pumkin.png"));
+				label_3.setIcon(new ImageIcon("pumkin.png"));
+				label_5.setIcon(new ImageIcon("pumkin.png"));
+				label_6.setIcon(new ImageIcon("pumkin.png"));
+				label_7.setIcon(new ImageIcon("pumkin.png"));
+				label_8.setIcon(new ImageIcon("pumkin.png"));
+				label_9.setIcon(new ImageIcon("pumkin.png"));
+				label_11.setIcon(new ImageIcon("pumkin.png"));
+				label_12.setIcon(new ImageIcon("pumkin.png"));
+				label_15.setIcon(new ImageIcon("pumkin.png"));
+				label_17.setIcon(new ImageIcon("pumkin.png"));
+				label_20.setIcon(new ImageIcon("pumkin.png"));
+				label_22.setIcon(new ImageIcon("pumkin.png"));
+				label_24.setIcon(new ImageIcon("pumkin.png"));
+				
+				}
+				else if(timerLabel.getText().equals("Time's up!!") || timerLabel.getText().equals("Game Over!")){
+					lblNewLabel.setIcon(new ImageIcon("black play button.png"));
+					green =false;
+				}else {
+				lblNewLabel.setIcon(new ImageIcon("black play button.png"));
+				}
+			}
+		});
+		lblNewLabel.setIcon(new ImageIcon("black play button.png"));
+		lblNewLabel.setBounds(267, 6, 171, 82);
+		frame.getContentPane().add(lblNewLabel);
+
+
+		
+		
 		label_2.setIcon(new ImageIcon("pumkin.png"));
 		label_2.setBounds(138, 391, 60, 54);
 		frame.getContentPane().add(label_2);
@@ -99,7 +181,6 @@ public class Example {
 			}
 		});
 
-		JLabel label_3 = new JLabel("");
 		label_3.setIcon(new ImageIcon("pumkin.png"));
 		label_3.setBounds(202, 391, 60, 54);
 		frame.getContentPane().add(label_3);
@@ -121,7 +202,7 @@ public class Example {
 			}
 		});
 
-		JLabel label_5 = new JLabel("");
+		
 		label_5.setIcon(new ImageIcon("pumkin.png"));
 		label_5.setBounds(331, 391, 60, 54);
 		frame.getContentPane().add(label_5);
@@ -138,13 +219,15 @@ public class Example {
 					label_5.setIcon(new ImageIcon("sick pumkin.png"));
 					timerLabel.setText("Game Over!");
 					val = -1;
+					lblNewLabel.setIcon(new ImageIcon("green play button.png"));
+					green =true;
 					frame.getContentPane().revalidate();
 					frame.getContentPane().repaint();
 				}
 			}
 		});
 
-		JLabel label_6 = new JLabel("");
+	
 		label_6.setIcon(new ImageIcon("pumkin.png"));
 		label_6.setBounds(10, 326, 60, 54);
 		frame.getContentPane().add(label_6);
@@ -168,7 +251,6 @@ public class Example {
 			}
 		});
 
-		JLabel label_7 = new JLabel("");
 		label_7.setIcon(new ImageIcon("pumkin.png"));
 		label_7.setBounds(652, 391, 60, 54);
 		frame.getContentPane().add(label_7);
@@ -185,13 +267,15 @@ public class Example {
 					label_7.setIcon(new ImageIcon("sick pumkin.png"));
 					timerLabel.setText("Game Over!");
 					val = -1;
+					lblNewLabel.setIcon(new ImageIcon("green play button.png"));
+					green =true;
 					frame.getContentPane().revalidate();
 					frame.getContentPane().repaint();
 				}
 			}
 		});
 
-		JLabel label_8 = new JLabel("");
+	
 		label_8.setIcon(new ImageIcon("pumkin.png"));
 		label_8.setBounds(588, 391, 60, 54);
 		frame.getContentPane().add(label_8);
@@ -213,7 +297,7 @@ public class Example {
 			}
 		});
 
-		JLabel label_9 = new JLabel("");
+	
 		label_9.setIcon(new ImageIcon("pumkin.png"));
 		label_9.setBounds(524, 391, 60, 54);
 		frame.getContentPane().add(label_9);
@@ -234,7 +318,7 @@ public class Example {
 			}
 		});
 
-		JLabel label_11 = new JLabel("");
+	
 		label_11.setIcon(new ImageIcon("pumkin.png"));
 		label_11.setBounds(396, 391, 60, 54);
 		frame.getContentPane().add(label_11);
@@ -257,7 +341,7 @@ public class Example {
 			}
 		});
 
-		JLabel label_12 = new JLabel("");
+		
 		label_12.setIcon(new ImageIcon("pumkin.png"));
 		label_12.setBounds(74, 326, 60, 54);
 		frame.getContentPane().add(label_12);
@@ -273,6 +357,8 @@ public class Example {
 					label_12.setIcon(new ImageIcon("sick pumkin.png"));
 					timerLabel.setText("Game Over!");
 					val = -1;
+					lblNewLabel.setIcon(new ImageIcon("green play button.png"));
+					green =true;
 					frame.getContentPane().revalidate();
 					frame.getContentPane().repaint();
 				}
@@ -280,7 +366,7 @@ public class Example {
 			}
 		});
 
-		JLabel label_15 = new JLabel("");
+	
 		label_15.setIcon(new ImageIcon("pumkin.png"));
 		label_15.setBounds(267, 326, 60, 54);
 		frame.getContentPane().add(label_15);
@@ -303,7 +389,7 @@ public class Example {
 			}
 		});
 
-		JLabel label_17 = new JLabel("");
+	
 		label_17.setIcon(new ImageIcon("pumkin.png"));
 		label_17.setBounds(396, 326, 60, 54);
 		frame.getContentPane().add(label_17);
@@ -326,7 +412,7 @@ public class Example {
 			}
 		});
 
-		JLabel label_20 = new JLabel("");
+		
 		label_20.setIcon(new ImageIcon("pumkin.png"));
 		label_20.setBounds(10, 391, 60, 54);
 		frame.getContentPane().add(label_20);
@@ -342,6 +428,8 @@ public class Example {
 					label_20.setIcon(new ImageIcon("sick pumkin.png"));
 					timerLabel.setText("Game Over!");
 					val = -1;
+					lblNewLabel.setIcon(new ImageIcon("green play button.png"));
+					green =true;
 					frame.getContentPane().revalidate();
 					frame.getContentPane().repaint();
 
@@ -349,7 +437,7 @@ public class Example {
 			}
 		});
 
-		JLabel label_22 = new JLabel("");
+		
 		label_22.setIcon(new ImageIcon("pumkin.png"));
 		label_22.setBounds(10, 261, 60, 54);
 		frame.getContentPane().add(label_22);
@@ -372,7 +460,7 @@ public class Example {
 			}
 		});
 
-		JLabel label_24 = new JLabel("");
+		
 		label_24.setIcon(new ImageIcon("pumkin.png"));
 		label_24.setBounds(138, 261, 60, 54);
 		frame.getContentPane().add(label_24);
@@ -399,18 +487,12 @@ public class Example {
 		label.setIcon(new ImageIcon("spooky_tree.jpg"));
 		label.setBounds(466, 76, 240, 304);
 		frame.getContentPane().add(label);
-		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setBounds(342, 17, 61, 16);
-		frame.getContentPane().add(lblNewLabel);
-
-
+	
 		try {
 			timer= new Timer();
 			int delay = 1000;
 			int period = 1000;
 			String secs= "10";
-			timer = new Timer();
 			interval = Integer.parseInt(secs);
 			timer.scheduleAtFixedRate(new TimerTask() {
 				public void run() {
@@ -418,11 +500,15 @@ public class Example {
 					val= setInterval();
 
 					if(timerLabel.getText().equals("Game Over!")) {	
+						lblNewLabel.setIcon(new ImageIcon("green play button.png"));
+						green =true;
 						//timerLabel.setText("Game Over!");
 					}else if(val>0){
 						timerLabel.setText("Time Left: " + val + " sec");
 					} else {
 						timerLabel.setText("Time's up!!");
+						lblNewLabel.setIcon(new ImageIcon("green play button.png"));
+						green =true;
 					}
 
 				}
