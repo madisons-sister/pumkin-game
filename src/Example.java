@@ -81,6 +81,7 @@ public class Example {
 		frame.getContentPane().add(btnStart);
 		
 
+
 		JLabel timerLabel = new JLabel("");
 		timerLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		timerLabel.setForeground(Color.ORANGE);
@@ -88,7 +89,6 @@ public class Example {
 		frame.getContentPane().add(timerLabel);
 
 		boolean clicked = false;
-
 		
 		JLabel label_2 = new JLabel("");
 		label_2.setIcon(new ImageIcon("pumkin.png"));
@@ -99,6 +99,7 @@ public class Example {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 
+
 				if(!timerLabel.getText().equals("Time's up!!")) {
 				score++;
 
@@ -107,10 +108,11 @@ public class Example {
 					scoreVar.setText(Integer.toString(score));
 					label_2.setIcon(new ImageIcon("dead pumkin.png"));
 				} 
+
 				
 				boolean clicked = true;
 
-				
+
 				frame.getContentPane().revalidate();
 				frame.getContentPane().repaint();
 				}
@@ -127,13 +129,13 @@ public class Example {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 
+
 				if(!timerLabel.getText().equals("Time's up!!")) {
 
 				score++;
 
 				score+=100;
 
-				
 				scoreVar.setText(Integer.toString(score));
 				label_3.setIcon(new ImageIcon("dead pumkin.png"));
 
@@ -151,6 +153,7 @@ public class Example {
 		label_5.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
+
 
 				if(!timerLabel.getText().equals("Time's up!!")) {
 				score++;
@@ -177,6 +180,7 @@ public class Example {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 
+
 				
 				if(!timerLabel.getText().equals("Time's up!!")) {
 
@@ -184,7 +188,6 @@ public class Example {
 
 				score+=100;
 
-				
 				scoreVar.setText(Integer.toString(score));
 				label_6.setIcon(new ImageIcon("dead pumkin.png"));
 
@@ -202,6 +205,7 @@ public class Example {
 		label_7.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
+
 
 				if(!timerLabel.getText().equals("Time's up!!")) {
 
@@ -228,11 +232,13 @@ public class Example {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 
+
 				if(!timerLabel.getText().equals("Time's up!!")) {
 
 				score++;
 
 				score+=100;
+
 
 				
 				scoreVar.setText(Integer.toString(score));
@@ -252,6 +258,7 @@ public class Example {
 		label_9.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
+
 
 				
 				if(!timerLabel.getText().equals("Time's up!!")) {
@@ -279,6 +286,7 @@ public class Example {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 
+
 				
 				if(!timerLabel.getText().equals("Time's up!!")) {
 
@@ -305,11 +313,11 @@ public class Example {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 
+
 				if(!timerLabel.getText().equals("Time's up!!")) {
 
 				score++;
 			
-
 				score-=50;
 				
 
@@ -331,12 +339,12 @@ public class Example {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 
+
 				if(!timerLabel.getText().equals("Time's up!!")) {
 
 				score++;
 
 				score+=100;
-
 				
 				scoreVar.setText(Integer.toString(score));
 				label_15.setIcon(new ImageIcon("dead pumkin.png"));
@@ -356,11 +364,13 @@ public class Example {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 
+
 				if(!timerLabel.getText().equals("Time's up!!")) {
 
 				score++;
 
 				score+=100;
+
 
 				
 				scoreVar.setText(Integer.toString(score));
@@ -380,14 +390,12 @@ public class Example {
 		label_20.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-
 				
 				if(!timerLabel.getText().equals("Time's up!!")) {
 
 				score++;
 
 				score-=50;
-
 				
 				scoreVar.setText(Integer.toString(score));				
 				label_20.setIcon(new ImageIcon("sick pumkin.png"));
@@ -408,9 +416,11 @@ public class Example {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 
+
 				if(!timerLabel.getText().equals("Time's up!!")) {
 
 				score++;
+
 
 				if (clicked == false) {
 					score+= 100;
@@ -419,8 +429,6 @@ public class Example {
 					label_22.setIcon(new ImageIcon("dead pumkin.png"));
 //					boolean clicked = true;
 				}
-
-				
 
 				frame.getContentPane().revalidate();
 				frame.getContentPane().repaint();
@@ -437,11 +445,13 @@ public class Example {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 
+
 				if(!timerLabel.getText().equals("Time's up!!")) {
 
 				score++;
 
 				score+=100;
+
 
 				
 				scoreVar.setText(Integer.toString(score));
